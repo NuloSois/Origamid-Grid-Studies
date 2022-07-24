@@ -1,0 +1,121 @@
+
+:root{
+    --max-width: 70vh;
+    --min-width: 400px;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #1f1f1f;
+    animation: color-change 30s infinite;
+}
+
+  
+  @keyframes color-change {
+    0% { color: white; }
+    50% { color: whitesmoke; }
+    65% { color: white; }
+    75% { color: whitesmoke; }
+    95% { color: white; }
+    100% { color:transparent; }
+  }
+.grid1 {
+    display: grid;
+    max-width: 70vh;
+    min-width: 400px;
+    max-height: calc(max-content+30px);
+    margin: 0 auto;
+
+    grid-template-columns: repeat(auto-fit, 49%);
+    grid-template-rows: 20px 20px 20px 20px 40px;
+
+
+}
+
+.item1{
+    text-align: center;
+    
+}
+
+.item1:hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
+    font-size: 110%;
+    text-shadow: 150%;
+}
+
+.item1-l{
+    text-align: center;
+    line-break:strict;
+}
+
+.item1-l:hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
+    font-size: 110%;
+    text-shadow: 150%;
+}
+
+.grid2 {
+    display: grid;
+    max-width: 70vh;
+    min-width: 400px;
+    max-height: 70vh;
+    min-height: 400px;
+
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.item2{
+    text-align: center;
+    background: url(../Resources/arvore.png);
+    background-repeat: round;
+}
+.item2-c{
+    text-align: center;
+    background: url(../Resources/arvore.png);
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+.item2:hover:not(.item2-c){
+    transition-delay: 100ms;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
+    animation: merging 1s forwards;
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+    font-size: 110%;
+    text-shadow: 150%;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+.item2-c:hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
+    animation: resize 3s;
+}
+
+@keyframes merging {
+    0% { opacity: 100%; }
+    25% { opacity: 50%; }
+    50% { opacity: 70%; }
+    75% { opacity: 90%; }
+    100% { opacity: 100%; }
+    }
+    
+  
+@keyframes resize {
+    0%   { background-size: 45%; }
+    25%  { background-size: 50%; }
+    50%  { background-size: 60%; }
+    75%  { background-size: 75%; }
+    100% { background-size: 90%;}
+    }  
+.box {
+    box-sizing: content-box;
+    background: darkslategray;
+    box-shadow: black 2px 2px ;
+    border-radius: 2vh;
+    gap: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-shadow: #1f1f1f 2px 1px;
+}
+
