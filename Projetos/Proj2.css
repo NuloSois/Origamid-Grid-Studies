@@ -18,6 +18,7 @@ body {
     95% { color: white; }
     100% { color:transparent; }
   }
+
 .grid1 {
     display: grid;
     max-width: 75vh;
@@ -33,6 +34,7 @@ body {
     "f f g g"
 
 }
+
 
 .pp {
     grid-area: p, q;
@@ -57,17 +59,6 @@ body {
 }
 
 .item1:hover{
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
-    font-size: 110%;
-    text-shadow: 150%;
-}
-
-.item1-l{
-    text-align: center;
-    line-break:strict;
-}
-
-.item1-l:hover{
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1000ms;
     font-size: 110%;
     text-shadow: 150%;
