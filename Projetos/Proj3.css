@@ -1,0 +1,101 @@
+body {
+    font-family: 'Monospace';
+    background-color: #1f1f1f;
+    animation: color-change 30s infinite;
+    color: whitesmoke;
+}
+
+h1 {
+    text-align: left;
+    left: -45%;
+    position: relative;
+    display: block;
+    font-size: 48px;
+}
+h2 {
+    text-align: center;
+    left: 0%;
+    position: relative;
+    display: block;    
+} 
+  @keyframes color-change {
+    0% {  border-color: white;      }
+    33% { border-color: grey; }
+    66%{  border-color:transparent;   }
+    100% {  border-color: white;      }
+
+  }
+
+  .grid-template-areas-4 {
+	grid-template-areas:
+		"logo logo"
+		"nav nav"
+		"content content"
+		"sidenav advert"
+		"footer footer"
+		;
+}
+
+.item {
+	margin: 5px;
+    border-radius: 1vh 1vh;
+	background: gray;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.grid {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 2px outset #ccc;
+    animation: color-change 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Grid */
+.grid {
+	display: grid;
+}
+
+.logo {
+	grid-area: logo;
+}
+
+.nav {
+	grid-area: nav;
+}
+
+.content {
+	grid-area: content;
+}
+
+.sidenav {
+	grid-area: sidenav;
+}
+
+.advert {
+	grid-area: advert;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+
+/* Grid Item */
+
+.grid {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+
+body > div {
+	padding: 40px 0;
+}
